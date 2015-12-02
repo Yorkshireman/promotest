@@ -1,0 +1,3 @@
+class PromotionalRules
+
+end
