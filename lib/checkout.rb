@@ -22,6 +22,6 @@ class Checkout
 
 		total = @promotional_rules.apply_promotions(total, basket)
 
-		total
+		"£" + (sprintf "%.2f", total)
 	end
 end

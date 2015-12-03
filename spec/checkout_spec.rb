@@ -16,13 +16,13 @@ describe 'Checkout' do
 	context 'when no promotional rules apply' do
 		it 'when one item is scanned a total can be deduced' do
 			co.scan(002)
-			expect(co.total).to eq 45.00
+			expect(co.total).to eq "£45.00"
 		end
 
 		it 'after multiple items are scanned, a total can be deduced' do
 			co.scan(001)
 			co.scan(003)
-			expect(co.total).to eq 29.20
+			expect(co.total).to eq "£29.20"
 		end
 	end
 
@@ -30,14 +30,14 @@ describe 'Checkout' do
 		it '10% discount is applied when total is more than 60.00' do
 			co.scan(002)
 			co.scan(002)
-			expect(co.total).to eq 81.00
+			expect(co.total).to eq "£81.00"
 		end
 
 		it '0.75 is deducted from total for each lavender heart if two or more are in basket' do
 			co.scan(001)
 			co.scan(002)
 			co.scan(001)
-			expect(co.total).to eq 55.8
+			expect(co.total).to eq "£55.80"
 		end
 	end
 
