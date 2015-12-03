@@ -18,10 +18,10 @@ class Checkout
 		total = 0
 		basket.map{ |item| total += product_range[item][1] }
 		total = promotional_rules.apply_promotions(total, basket)
-		apply_formatting(total)
+		apply_currency_formatting(total)
 	end
 
-	def apply_formatting total
+	def apply_currency_formatting total
 		"£" + (sprintf "%.2f", total)
 	end
 end
