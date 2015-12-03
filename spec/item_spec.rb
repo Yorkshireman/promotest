@@ -1,11 +1,13 @@
 require 'item'
 
 describe 'Item' do
+	let(:lavender_heart){ Item.new(001) }
+
 	it 'has a product code' do
-		lavender_heart = Item.new(001)
 		expect(lavender_heart.product_code).to eq 001
 	end
 
-	xit 'has a title'
-	xit 'has a price'
+	it 'has a title' do
+		expect(lavender_heart.title).to eq "Lavender Heart"
+	end
 end
