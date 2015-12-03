@@ -16,12 +16,12 @@ class Checkout
 
 	def total
 		total = 0
-		@basket.each do |item|
-			total += @product_range[item][1]
-		end
+		basket.map{ |item| total += product_range[item][1] }
+		total = promotional_rules.apply_promotions(total, basket)
+		apply_formatting(total)
+	end
 
-		total = @promotional_rules.apply_promotions(total, basket)
-
+	def apply_formatting total
 		"£" + (sprintf "%.2f", total)
 	end
 end
