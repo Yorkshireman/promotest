@@ -19,6 +19,9 @@ class Checkout
 		@basket.each do |item|
 			total += @product_range[item][1]
 		end
+
+		total = @promotional_rules.apply_promotions(total, basket)
+
 		total
 	end
 end
