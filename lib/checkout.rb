@@ -10,11 +10,15 @@ class Checkout
 		@basket = []
 	end
 
-	def scan item
-		basket << item
+	def scan product_code
+		basket << product_code
 	end
 
 	def total
-		@product_range[@basket[0]][1]
+		total = 0
+		@basket.each do |item|
+			total += @product_range[item][1]
+		end
+		total
 	end
 end

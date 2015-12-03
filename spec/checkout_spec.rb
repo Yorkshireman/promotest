@@ -13,8 +13,16 @@ describe 'Checkout' do
 		expect(co.basket).to include lavender_heart_double
 	end
 
-	it 'when item is scanned a total can be deduced' do
-		co.scan(001)
-		expect(co.total).to eq 9.25
+	context 'when no promotional rules apply' do
+		it 'when one item is scanned a total can be deduced' do
+			co.scan(001)
+			expect(co.total).to eq 9.25
+		end
+
+		it 'when two items are scanned, a total can be deduced' do
+			co.scan(001)
+			co.scan(002)
+			expect(co.total).to eq 54.25
+		end
 	end
 end
