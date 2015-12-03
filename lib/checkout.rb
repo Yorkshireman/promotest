@@ -15,7 +15,7 @@ class Checkout
 
 	def total
 		total = 0
-		basket.map{ |item| total += ProductRange.items[item][1] }
+		basket.map{ |item| total += ProductRange.items[item][:price] }
 		total = promotional_rules.apply_promotions(total, basket)
 		apply_currency_formatting(total)
 	end

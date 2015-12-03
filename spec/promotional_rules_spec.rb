@@ -1,9 +1,6 @@
 require 'promotional_rules'
 
 describe PromotionalRules do
-	let(:checkout_with_two_lavender_hearts){ double :checkout_with_two_lavender_hearts, basket: [001, 001, 003] }
-	let(:checkout_with_one_lavender_heart){ double :checkout_with_one_lavender_heart, basket: [001, 002, 002] }
-
 	describe '#large_enough_total?' do
 		it 'returns true when total is over 60' do
 			expect(subject.large_enough_total?(61)).to eq true
@@ -17,11 +14,11 @@ describe PromotionalRules do
 
 	describe '#two_or_more_lavender_hearts?' do
 		it 'returns true when there are two or more lavender hearts in the basket' do
-			expect(subject.two_or_more_lavender_hearts?(checkout_with_two_lavender_hearts.basket)).to eq true
+			expect(subject.two_or_more_lavender_hearts?([001, 001, 003])).to eq true
 		end
 
 		it 'returns false when there are less than two lavender hearts in the basket' do
-			expect(subject.two_or_more_lavender_hearts?(checkout_with_one_lavender_heart.basket)).to eq false
+			expect(subject.two_or_more_lavender_hearts?([001, 002, 002])).to eq false
 		end
 	end
 
