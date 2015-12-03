@@ -1,7 +1,6 @@
 require 'promotional_rules'
 
-describe 'PromotionalRules' do
-	let(:subject){ PromotionalRules.new }
+describe PromotionalRules do
 	let(:checkout_with_two_lavender_hearts){ double :checkout_with_two_lavender_hearts, basket: [001, 001, 003] }
 	let(:checkout_with_one_lavender_heart){ double :checkout_with_one_lavender_heart, basket: [001, 002, 002] }
 
