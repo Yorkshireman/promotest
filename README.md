@@ -3,3 +3,6 @@ To clone:
   
 How to run:  
 - open irb
+- `load './lib/checkout.rb'
+- `co = Checkout.new`
+- 
