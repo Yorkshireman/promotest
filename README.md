@@ -19,7 +19,7 @@ To 'scan' an item, use its product code:
 - `co.scan(001)`  
 This can be done multiple times.
 
-Promotions:
+Promotions:  
 Two promotions are currently built in - one is the 'Lavender Heart' promotion: when two or more are bought, their price drops to 8.50. The second promotion is a 10% when the purchase total is over 60. Note that the purchase only qualifies for the 10% discount if the total is over 60 AFTER any Lavender Heart promotion is applied.  
   
 Promotions are easily modified because they are kept separately in the `PromotionalRules` class which is injected into the Checkout class.
