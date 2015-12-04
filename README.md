@@ -6,7 +6,7 @@ How to run:
 - `load './lib/checkout.rb'`
 - `co = Checkout.new`
 
-The Product Range is represented as a hash inside the ProductRange class, as so:
+The Product Range is represented as a hash inside the ProductRange module, as so:
 ```
     { 
     001 => { product: "Lavender Heart", price: 9.25 }, 
