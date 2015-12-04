@@ -1,15 +1,17 @@
 require 'checkout'
 
 describe Checkout do
-  let(:lavender_heart_double){ double :item, product_code: 001 }
-
   it 'initializes with promotional rules by default' do
     expect(subject.promotional_rules).to be_a PromotionalRules
   end
 
   it 'can scan an item' do
-    subject.scan(lavender_heart_double)
-    expect(subject.basket).to include lavender_heart_double
+    subject.scan(001)
+    expect(subject.basket).to include 001
+  end
+
+  it 'cannot scan an item that does not exist in product range' do
+    expect{subject.scan(006)}.to_not change{subject.basket.count}
   end
 
   context 'when no promotional rules apply' do

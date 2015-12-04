@@ -10,6 +10,7 @@ class Checkout
   end
 
   def scan product_code
+    return unless ProductRange.items.has_key?(product_code)
     basket << product_code
   end
 
