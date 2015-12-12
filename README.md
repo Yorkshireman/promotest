@@ -36,3 +36,5 @@ Testing:
 To run the rspec tests:  
 - `bundle`  
 - `rspec`  
+
+Travis builds using Ruby version 2.2.0.
