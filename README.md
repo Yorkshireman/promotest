@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/Yorkshireman/promotest.svg?branch=master)](https://travis-ci.org/Yorkshireman/promotest)
+
 To clone:  
 `git clone git@github.com:Yorkshireman/promotest.git`  
   
