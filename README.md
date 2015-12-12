@@ -1,4 +1,6 @@
-[![Build Status](https://travis-ci.org/Yorkshireman/promotest.svg?branch=master)](https://travis-ci.org/Yorkshireman/promotest)
+[![Build Status](https://travis-ci.org/Yorkshireman/promotest.svg?branch=master)](https://travis-ci.org/Yorkshireman/promotest)  
+
+[![Coverage Status](https://coveralls.io/repos/Yorkshireman/promotest/badge.svg?branch=master&service=github)](https://coveralls.io/github/Yorkshireman/promotest?branch=master)  
 
 To clone:  
 `git clone git@github.com:Yorkshireman/promotest.git`  
