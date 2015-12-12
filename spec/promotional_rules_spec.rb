@@ -1,3 +1,4 @@
+require 'spec_helper'
 require 'promotional_rules'
 
 describe PromotionalRules do

@@ -1,3 +1,4 @@
+require 'spec_helper'
 require 'product_range'
 
 describe ProductRange do
