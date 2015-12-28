@@ -5,9 +5,7 @@ class PromotionalRules
     @total = total
 
     if PROMOTIONS.count > 0
-      PROMOTIONS.each do |promotion|
-        @total = self.send promotion, @total, basket
-      end
+      PROMOTIONS.each { |promotion| @total = self.send promotion, @total, basket }
     end
    
     @total.round(2)
