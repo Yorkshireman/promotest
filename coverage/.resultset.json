@@ -32,9 +32,16 @@
       "/home/andrew/projects/promotest/lib/promotional_rules.rb": [
         1,
         1,
-        8,
-        8,
-        8,
+        null,
+        1,
+        9,
+        null,
+        9,
+        16,
+        null,
+        null,
+        9,
+        9,
         null,
         null,
         1,
@@ -53,10 +60,10 @@
         null,
         null,
         1,
-        11,
+        12,
         5,
         null,
-        11,
+        12,
         null,
         null
       ],
@@ -124,9 +131,14 @@
         1,
         null,
         null,
+        1,
+        1,
+        1,
+        null,
+        null,
         null
       ]
     },
-    "timestamp": 1451330909
+    "timestamp": 1451337580
   }
 }

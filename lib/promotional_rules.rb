@@ -1,11 +1,18 @@
 class PromotionalRules
+  PROMOTIONS = [:lavender_heart_promotion]
+
   def apply_promotions total, basket
-    total = apply_lavender_heart_promotion total, basket
-    total = apply_ten_percent_discount(total)
+    @total = total
+
+    if PROMOTIONS.count > 0
+      PROMOTIONS.each { |promotion| @total = self.send promotion, total, basket }
+    end
+   
+    total = apply_ten_percent_discount(@total)
     total.round(2)
   end
 
-  def apply_lavender_heart_promotion total, basket
+  def lavender_heart_promotion total, basket
     if two_or_more_lavender_hearts? basket
       basket.map { |item| total -= 0.75 if item == 001 }
     end
