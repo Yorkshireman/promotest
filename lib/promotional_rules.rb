@@ -1,15 +1,16 @@
 class PromotionalRules
-  PROMOTIONS = [:lavender_heart_promotion]
+  PROMOTIONS = [:lavender_heart_promotion, :ten_percent_discount]
 
   def apply_promotions total, basket
     @total = total
 
     if PROMOTIONS.count > 0
-      PROMOTIONS.each { |promotion| @total = self.send promotion, total, basket }
+      PROMOTIONS.each do |promotion|
+        @total = self.send promotion, @total, basket
+      end
     end
    
-    total = apply_ten_percent_discount(@total)
-    total.round(2)
+    @total.round(2)
   end
 
   def lavender_heart_promotion total, basket
@@ -27,7 +28,7 @@ class PromotionalRules
     n >= 2
   end
 
-  def apply_ten_percent_discount total
+  def ten_percent_discount total, *arg
     if total > 60.00
       total = total - total/10
     end

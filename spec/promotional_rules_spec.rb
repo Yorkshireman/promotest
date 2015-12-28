@@ -2,14 +2,14 @@ require 'spec_helper'
 require 'promotional_rules'
 
 describe PromotionalRules do
-  describe '#apply_ten_percent_discount' do
+  describe '#ten_percent_discount' do
     it 'total is reduced by ten percent when initial total is over 60.00' do
-      expect(subject.apply_ten_percent_discount(61.00)).to eq 54.90
+      expect(subject.ten_percent_discount(61.00)).to eq 54.90
     end
 
     it 'total remains the same when it is 60.00 or less' do
-      expect(subject.apply_ten_percent_discount(60.00)).to eq 60.00
-      expect(subject.apply_ten_percent_discount(30.00)).to eq 30.00
+      expect(subject.ten_percent_discount(60.00)).to eq 60.00
+      expect(subject.ten_percent_discount(30.00)).to eq 30.00
     end
   end
 
