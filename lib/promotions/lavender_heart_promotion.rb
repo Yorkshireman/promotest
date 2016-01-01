@@ -6,11 +6,10 @@ class LavenderHeartPromotion
     total
   end
 
-
   private
 
   def discount_lavender_heart_price total, basket
-    basket.map { |item| total -= 0.75 if item == 001 }
+    basket.each { |item| total -= 0.75 if item == 001 }
     total
   end
 

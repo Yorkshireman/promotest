@@ -15,7 +15,6 @@ class ApplyPromotions
     total = apply_basket_discounts total, basket unless @basket_discounts.empty?
     total
   end
-
   
   private
 
