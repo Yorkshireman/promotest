@@ -2,10 +2,6 @@ require 'spec_helper'
 require 'checkout'
 
 describe Checkout do
-  it 'initializes with promotional rules by default' do
-    expect(subject.promotional_rules).to be_a PromotionalRules
-  end
-
   it 'can scan an item' do
     subject.scan(001)
     expect(subject.basket).to include 001

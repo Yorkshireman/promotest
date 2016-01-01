@@ -11,8 +11,9 @@ class ApplyPromotions
                       ]
 
   def self.call total, basket
-    total = apply_item_promotions total, basket
-    total = apply_basket_discounts total, basket
+    total = apply_item_promotions total, basket unless @item_promotions.empty?
+    total = apply_basket_discounts total, basket unless @basket_discounts.empty?
+    total
   end
 
   

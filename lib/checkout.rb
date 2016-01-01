@@ -1,11 +1,10 @@
-require_relative './promotional_rules.rb'
 require_relative './product_range.rb'
+require_relative './services/apply_promotions'
 
 class Checkout
   attr_reader :promotional_rules, :basket
 
-  def initialize(promotional_rules = PromotionalRules.new)
-    @promotional_rules = promotional_rules
+  def initialize
     @basket = []
   end
 
@@ -16,9 +15,11 @@ class Checkout
 
   def total
     total = basket.inject(0){ |sum_total, product_code| sum_total + ProductRange.items[product_code][:price] }
-    total = promotional_rules.apply_promotions(total, basket)
+    total = ApplyPromotions.call total, basket
     apply_currency_formatting(total)
   end
+
+  private
 
   def apply_currency_formatting total
     "£" + (sprintf "%.2f", total)
