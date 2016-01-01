@@ -23,16 +23,6 @@ describe PromotionalRules do
     end
   end
 
-  describe '#lavender_cinnamon_shampoo_promotion' do
-    it "discounts the given total by 20% when basket contains two lavender hearts and one cinnamon shampoo" do
-      expect(subject.lavender_cinnamon_shampoo_promotion(27.49, [001, 001, 004])).to eq 21.991999999999997
-    end
-
-    it "discount the given total by 20% when basket contains three lavender hearts and four cinnamon shampoos" do
-      expect(subject.lavender_cinnamon_shampoo_promotion(63.71, [001, 001, 001, 004, 004, 004, 004])).to eq 50.968
-    end
-  end
-
   describe '#cinnamon_shampoo?' do
     it "returns true if the given basket includes at least one cinnamon shampoo" do
       expect(subject.cinnamon_shampoo? [004]).to eq true
