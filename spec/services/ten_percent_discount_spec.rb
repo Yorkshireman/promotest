@@ -2,8 +2,6 @@ require 'spec_helper'
 require 'promotions/ten_percent_discount'
 
 describe TenPercentDiscount do
-  let(:subject){ TenPercentDiscount.new }
-
   it 'total is reduced by ten percent when initial total is over 60.00' do
     expect(subject.apply(61.00)).to eq 54.90
   end
