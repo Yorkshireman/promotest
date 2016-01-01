@@ -2,27 +2,6 @@ require 'spec_helper'
 require 'promotional_rules'
 
 describe PromotionalRules do
-  describe '#two_or_more_lavender_hearts?' do
-    it 'returns true when there are two or more lavender hearts in the basket' do
-      expect(subject.two_or_more_lavender_hearts?([001, 001, 003])).to eq true
-    end
-
-    it 'returns false when there are less than two lavender hearts in the basket' do
-      expect(subject.two_or_more_lavender_hearts?([001, 002, 002])).to eq false
-    end
-  end
-
-  describe '#cinnamon_shampoo?' do
-    it "returns true if the given basket includes at least one cinnamon shampoo" do
-      expect(subject.cinnamon_shampoo? [004]).to eq true
-      expect(subject.cinnamon_shampoo? [001, 004, 002]).to eq true
-    end
-
-    it "returns false if the given basket does not contain any cinnamon shampoos" do
-      expect(subject.cinnamon_shampoo? [001, 001, 002]).to eq false
-    end
-  end
-
   describe '#apply_promotions' do
     it 'returns correct total for a basket with no promotion applicable' do
       expect(subject.apply_promotions(54.25, [001, 002])).to eq 54.25
