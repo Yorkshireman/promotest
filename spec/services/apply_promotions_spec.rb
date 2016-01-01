@@ -29,7 +29,6 @@ describe ApplyPromotions do
   end
 
   it 'returns correct total when no promotions are running' do
-    # stub_const("PromotionalRules::PROMOTIONS", [])
     subject.instance_variable_set(:@item_promotions, [])
     subject.instance_variable_set(:@basket_discounts, [])
     expect(subject.call(126.74, [001, 001, 001, 004, 002, 002])).to eq 126.74
