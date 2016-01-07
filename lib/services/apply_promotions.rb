@@ -1,6 +1,6 @@
-require 'promotions/lavender_heart_promotion'
-require 'promotions/ten_percent_discount'
-require 'promotions/lavender_cinnamon_promotion'
+require_relative '../promotions/lavender_heart_promotion'
+require_relative '../promotions/ten_percent_discount'
+require_relative '../promotions/lavender_cinnamon_promotion'
 
 class ApplyPromotions
   @item_promotions =  [LavenderHeartPromotion.new]
