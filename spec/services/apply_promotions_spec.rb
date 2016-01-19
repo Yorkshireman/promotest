@@ -5,7 +5,9 @@ describe ApplyPromotions do
   let(:subject){ ApplyPromotions }
 
   it 'returns correct total for a basket with only lavender heart promotion applicable' do
-    expect(subject.call(38.45, [001, 003, 001])).to eq 36.95
+    total = subject.call(38.45, [001, 003, 001])
+
+    expect(total).to eq 36.95
   end
 
   it 'returns correct total for a basket with only 10% discount applicable' do
