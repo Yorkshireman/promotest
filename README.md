@@ -5,7 +5,7 @@
 To clone:  
 `git clone git@github.com:Yorkshireman/promotest.git`  
   
-####How to run:  
+#### How to run:  
 - open irb
 - `load './lib/checkout.rb'`
 - `co = Checkout.new`
@@ -24,7 +24,7 @@ To 'scan' an item, use its product code:
 - `co.scan(001)`  
 This can be done multiple times.
 
-####Promotions:  
+#### Promotions:  
 Three promotions are currently built in - one is the 'Lavender Heart' promotion: when two or more are bought, their price drops to £8.50.  
 
 The second promotion is a 20% discount if at least two Lavenders Hearts and at least one Cinnamon Shampoo have been bought.   
@@ -40,7 +40,7 @@ To view your current basket:
 To get the total price:
 - `co.total`
   
-####Testing:  
+#### Testing:  
 To run the rspec tests:  
 - `bundle`  
 - `rspec`  
