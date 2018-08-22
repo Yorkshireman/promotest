@@ -1,9 +1,6 @@
 [![Build Status](https://travis-ci.org/Yorkshireman/promotest.svg?branch=master)](https://travis-ci.org/Yorkshireman/promotest)  
 
-[![Coverage Status](https://coveralls.io/repos/Yorkshireman/promotest/badge.svg?branch=master&service=github)](https://coveralls.io/github/Yorkshireman/promotest?branch=master)  
-
-To clone:  
-`git clone git@github.com:Yorkshireman/promotest.git`  
+[![Coverage Status](https://coveralls.io/repos/Yorkshireman/promotest/badge.svg?branch=master&service=github)](https://coveralls.io/github/Yorkshireman/promotest?branch=master)   
   
 #### How to run:  
 - open irb
@@ -13,10 +10,10 @@ To clone:
 The Product Range is represented as a hash inside the ProductRange module, as so:
 ```
     { 
-    001 => { product: "Lavender Heart", price: 9.25 }, 
-    002 => { product: "Personalised cufflinks", price: 45.00 },
-    003 => { product: "Kids T-Shirt", price: 19.95 },
-    004 => { product: "Cinnamon Shampoo", price: 8.99 } 
+      001 => { product: "Lavender Heart", price: 9.25 }, 
+      002 => { product: "Personalised cufflinks", price: 45.00 },
+      003 => { product: "Kids T-Shirt", price: 19.95 },
+      004 => { product: "Cinnamon Shampoo", price: 8.99 } 
     }
 ```
 
